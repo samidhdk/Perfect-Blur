@@ -23,6 +23,9 @@ def main():
                         help="Path of the directory that will recive the blurred images ")
     parser.add_argument("-r", "--report_folder", required=False,
                         help="Path of the .json file that will recive the report")
+    parser.add_argument("-h", "--help", action="help", default=argparse.SUPPRESS,
+                    help="Show this help message and exit. Includes the definition of all arguments.")
+    
     args = parser.parse_args()
 
     image_folder = pathlib.Path(args.image_folder)
