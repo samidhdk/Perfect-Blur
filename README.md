@@ -1,27 +1,49 @@
-# Perfect-Blur
-Permite mover las imagenes borrosas de un directorio a otro con la misma estructura que el primero (la copia de subdirectorios depende de la ruta dada), adicionalmente genera un reporte en formato JSON.
-
-
-## Ejemplo caso de uso:
-
-python3 blur_detector.py -i ”./pictures/google_photos_backup” -t ”./pictures/blurred_images” -r ”./report.json”
-
-O
-
-python3 blur_detector.py --image_folder=”./pictures/google_photos_backup” --trash_folder=”./pictures/blurred_images” --report_folder=”./report.json”
-
-## Explicación
-
-Argumentos: 
-
- (Obligatorio) -i / --image_folder: "Ruta del directorio que contine las imagenes a filtrar" / "Path of the directory that contains the images to filter"
+<div align="center">
+<pre>
+██████╗ ███████╗██████╗ ███████╗███████╗ █████╗ ████████╗  ██████╗ ██╗     ██╗   ██╗██████╗ 
+██╔══██╗██╔════╝██╔══██╗██╔════╝██╔════╝██╔══██╗╚══██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗
+██████╔╝█████╗  ██████╔╝█████╗  █████╗  ██║  ╚═╝   ██║     ██████╦╝██║     ██║   ██║██████╔╝
+██╔═══╝ ██╔══╝  ██╔══██╗██╔══╝  ██╔══╝  ██║  ██╗   ██║     ██╔══██╗██║     ██║   ██║██╔══██╗
+██║     ███████╗██║  ██║██║     ███████╗╚█████╔╝   ██║     ██████╦╝███████╗╚██████╔╝██║  ██║
+╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝ ╚════╝    ╚═╝     ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝
+--------------------------------------------------------------------------------------------
+ python cli program to remove blurry images
  
- (Obligatorio) -t / --trash_folder: "Ruta del directorio que recibirá las imagenes borrosas" / "Path of the directory that will recive the blurred images "
+</pre>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+</div>
+
+Moves blurry images from a folder to another given and generates a JSON report
+
+## Usage example
+### To get help with Command-line Arguments
+```
+python3 perfect_blur.py -h
+```
+(or)
+```
+python3 perfect_blur.py --help
+```
+### Using Comand-line Arguments
+```
+python3 perfect_blur.py -i ”./pictures/google_photos_backup” -t ”./pictures/blurred_images” -r ”./report.json”
+```
+(or)
+```
+python3 perfect_blur.py --image_folder=”./pictures/google_photos_backup” --trash_folder=”./pictures/blurred_images” --report_folder=”./report.json”
+```
+## Arguments explanation
+
+ -i / --image_folder: "Path of the directory that contains the images to filter"
  
- (Opcional)    -r / --report_folder: "Ruta del archivo .json que recibirá los resultados de la ejecución" /  "Path of the .json file that will recive the report"
+ -t / --trash_folder: "Path of the directory that will recive the blurred images "
+ 
+ -r / --report_folder: "Path of the .json file that will recive the report"
 
-## Ejemplo reporte JSON:
-
+## JSON report example:
+``` json
     {
     "elapsed_time": "0.12 seconds",
     "total_images": 5,
@@ -51,3 +73,4 @@ Argumentos:
         }
     ]
     }
+```
