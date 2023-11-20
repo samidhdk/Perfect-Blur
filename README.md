@@ -15,7 +15,8 @@
 
 </div>
 
-Moves blurry images from a folder to another given and generates a JSON report
+Moves blurry images from a folder to another given and generates a JSON report.
+Be aware that this script mantains the folder hierarchy. So something like "Image_Folder>Summer, Winter" will be treated as "Trash_Folder>Summer, Winter".
 
 ## Usage example
 ### To get help with Command-line Arguments
