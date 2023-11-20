@@ -16,7 +16,6 @@
 </div>
 
 Moves blurry images from a folder to another given and generates a JSON report.
-Be aware that this script mantains the folder hierarchy. So something like "Image_Folder>Summer, Winter" will be treated as "Trash_Folder>Summer, Winter".
 
 ## Usage example
 ### To get help with Command-line Arguments
@@ -75,3 +74,33 @@ python3 perfect_blur.py --image_folder=”./pictures/google_photos_backup” --t
     ]
     }
 ```
+
+## Careful!
+
+This script mantains folder hierarchy, which means that soemthing like this:
+
+```
+Images_Folder 📁/
+├─ Winter 📁/
+│  ├─ Blurred_1
+│  ├─ Not_Blurred
+├─ Summer 📁/
+│  ├─ Blurred_1
+│  ├─ Not_Blurred
+│  ├─ Blurred_2
+```
+
+Will give the next result:
+
+```
+Trash_Folder 📁/
+├─ Winter 📁/
+│  ├─ Blurred_1
+├─ Summer 📁/
+│  ├─ Blurred_1
+│  ├─ Blurred_2
+```
+
+
+
+
