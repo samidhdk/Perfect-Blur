@@ -77,7 +77,7 @@ python3 perfect_blur.py --image_folder=”./pictures/google_photos_backup” --t
 
 ## Careful!
 
-This script mantains folder hierarchy, which means that soemthing like this:
+This script mantains folder hierarchy, which means that something like this:
 
 ```
 Images_Folder 📁/
