@@ -99,6 +99,14 @@ Trash_Folder 📁/
 ├─ Summer 📁/
 │  ├─ Blurred_1
 │  ├─ Blurred_2
+
+Images_Folder 📁/
+├─ Winter 📁/
+│  ├─ Not_Blurred
+├─ Summer 📁/
+│  ├─ Not_Blurred
+
+
 ```
 
 
